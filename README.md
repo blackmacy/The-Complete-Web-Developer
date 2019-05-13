@@ -2,7 +2,8 @@
 Codes, sources, and notes from the The Complete Web Developer: Zero to Mastery course
 
 ## HTML:
-### First Website:
+### My First Website:
+![Image of HTNL format]
 <div align="center">
-    <img src="/output0.jpg", width="320">
+    <img src="/sample.jpg", width="100">
 </div>
