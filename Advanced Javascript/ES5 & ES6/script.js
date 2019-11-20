@@ -5,7 +5,17 @@
 // 		  - can change the properties of the object, but cannot reassign the object itself
 
 // let: anytime it wrap in a curly bracket, it creates a new scope
-// var: it will bring over the change variable
+// var: it will bring over the change variable (after modified). 
+
+For exp:
+
+let experience = 100;
+var wizardLevel = false;
+
+if(experience > 90) {
+	var wizardLevel = true;
+}
+console.log("outside bracket:", wizardLevel); // true
 
 // ** "const" use for something unchanged, and "let" used for something that need to be updated
 
@@ -15,10 +25,10 @@ let wizardLevel = false;
 
 if(experience > 90) {
 	let wizardLevel = true;
-	console.log("inside bracket:", wizardLevel);
+	console.log("inside bracket:", wizardLevel); // true
 }
 
-console.log("outside bracket:", wizardLevel);
+console.log("outside bracket:", wizardLevel); // false
 
 // 2) Destructuring:
 
@@ -32,7 +42,7 @@ const player = obj.player;
 const experience = obj.experience;
 let wizardLevel = obj.wizardLevel;
 
-const { player, experience } = obj. // same as line 30 & 31
+const { player, experience } = obj. // same as line 31 & 32
 let { wizardLevel } = 30
 
 // 3) Object properties:
@@ -71,11 +81,13 @@ function greet(name=" ", age=30, pet="cat"){
 	return `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have`;
 }
 
-// Symbol:
+// Symbol: create completely unique type
 
 var sym1 = Symbol();
 var sym2 = Symbol("foo");
 var sym3 = Symbol("foo");
+
+// sym2 === sym3   will return False
 
 
 // 6) arrow functions:
